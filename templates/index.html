@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TaskManager</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <header>
+    <h1>TaskManager</h1>
+    <p>TechSolutions · Gestión de tareas</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2 id="form-titulo">Nueva tarea</h2>
+      <form id="form-tarea" novalidate>
+        <input type="hidden" id="tarea-id">
+        <label>Nombre
+          <input type="text" id="nombre" maxlength="100" placeholder="Elaborar documentación">
+        </label>
+        <label>Descripción
+          <textarea id="descripcion" rows="2" placeholder="Detalles de la tarea"></textarea>
+        </label>
+        <div class="fila">
+          <label>Prioridad
+            <select id="prioridad">
+              <option>Alta</option>
+              <option selected>Media</option>
+              <option>Baja</option>
+            </select>
+          </label>
+          <label>Estado
+            <select id="estado">
+              <option selected>Pendiente</option>
+              <option>En proceso</option>
+              <option>Terminada</option>
+            </select>
+          </label>
+        </div>
+        <div class="fila">
+          <button type="submit" id="btn-guardar">Guardar tarea</button>
+          <button type="button" id="btn-cancelar" class="secundario" hidden>Cancelar</button>
+        </div>
+        <p id="mensaje" role="status"></p>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Tareas <span id="contador"></span></h2>
+      <div id="lista"></div>
+    </section>
+  </main>
+
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

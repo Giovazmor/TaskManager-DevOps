@@ -1,0 +1,76 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: #f3f4f6;
+  color: #1f2937;
+}
+header { background: #1e3a8a; color: #fff; padding: 1.2rem 1.5rem; }
+header h1 { margin: 0; font-size: 1.6rem; }
+header p { margin: .2rem 0 0; opacity: .8; font-size: .9rem; }
+main {
+  max-width: 900px;
+  margin: 1.5rem auto;
+  padding: 0 1rem;
+  display: grid;
+  gap: 1.2rem;
+}
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1.2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .12);
+}
+.card h2 { margin-top: 0; font-size: 1.15rem; }
+label { display: block; font-size: .85rem; font-weight: 600; margin-bottom: .8rem; }
+input[type=text], textarea, select {
+  width: 100%;
+  margin-top: .25rem;
+  padding: .5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font: inherit;
+}
+.fila { display: flex; gap: .8rem; }
+.fila label { flex: 1; }
+button {
+  background: #1e3a8a;
+  color: #fff;
+  border: 0;
+  border-radius: 6px;
+  padding: .5rem 1rem;
+  font: inherit;
+  cursor: pointer;
+}
+button:hover { background: #1e40af; }
+button.secundario { background: #6b7280; }
+button.peligro { background: #b91c1c; }
+button.peligro:hover { background: #991b1b; }
+button.chico { padding: .3rem .6rem; font-size: .8rem; }
+#mensaje { min-height: 1.2rem; margin: .6rem 0 0; font-size: .9rem; }
+#mensaje.ok { color: #047857; }
+#mensaje.error { color: #b91c1c; }
+.tarea {
+  border: 1px solid #e5e7eb;
+  border-left-width: 5px;
+  border-radius: 8px;
+  padding: .8rem;
+  margin-bottom: .7rem;
+}
+.tarea.Alta { border-left-color: #dc2626; }
+.tarea.Media { border-left-color: #f59e0b; }
+.tarea.Baja { border-left-color: #10b981; }
+.tarea h3 { margin: 0 0 .2rem; font-size: 1rem; }
+.tarea.Terminada h3 { text-decoration: line-through; opacity: .6; }
+.tarea p { margin: .2rem 0 .6rem; font-size: .9rem; color: #4b5563; }
+.acciones { display: flex; gap: .5rem; flex-wrap: wrap; align-items: center; }
+.etiqueta {
+  display: inline-block;
+  font-size: .75rem;
+  padding: .1rem .5rem;
+  border-radius: 999px;
+  background: #e5e7eb;
+  margin-right: .3rem;
+}
+.vacio { color: #6b7280; text-align: center; padding: 1rem; }
+@media (max-width: 560px) { .fila { flex-direction: column; gap: 0; } }
